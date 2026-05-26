@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FUNNY CALCI 🎮</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating background particles -->
+  <div class="bg-particles" id="bgParticles"></div>
+
+  <!-- Sound toggle -->
+  <button class="sound-toggle" id="soundToggle" title="Toggle Sound">🔊</button>
+
+  <main class="scene">
+
+    <!-- Title -->
+    <div class="title-wrap">
+      <h1 class="title">
+        <span class="t-f">F</span><span class="t-u">U</span><span class="t-n">N</span><span class="t-n2">N</span><span class="t-y">Y</span>
+        <span class="t-space">&nbsp;</span>
+        <span class="t-c">C</span><span class="t-a">A</span><span class="t-l">L</span><span class="t-c2">C</span><span class="t-i">I</span>
+      </h1>
+      <p class="subtitle">The calculator that parties 🎉</p>
+    </div>
+
+    <!-- Calculator Card -->
+    <div class="calc-card" id="calcCard">
+
+      <!-- Face decoration -->
+      <div class="calc-face">
+        <span class="eye left-eye" id="eyeL">👁</span>
+        <span class="eye right-eye" id="eyeR">👁</span>
+        <span class="mouth" id="mouth">😐</span>
+      </div>
+
+      <!-- Display -->
+      <div class="display-shell">
+        <div class="display-label">RESULT</div>
+        <div class="display-track">
+          <div class="expression-line" id="exprLine"></div>
+          <div class="main-display" id="mainDisplay">0</div>
+        </div>
+        <div class="display-scanline"></div>
+      </div>
+
+      <!-- Buttons grid -->
+      <div class="btn-grid">
+
+        <!-- Row 1 -->
+        <button class="btn btn-fn" data-val="AC" id="btnAC">AC</button>
+        <button class="btn btn-fn" data-val="DEL">DEL</button>
+        <button class="btn btn-fn" data-val="%">%</button>
+        <button class="btn btn-op" data-val="/">÷</button>
+
+        <!-- Row 2 -->
+        <button class="btn btn-num" data-val="7">7</button>
+        <button class="btn btn-num" data-val="8">8</button>
+        <button class="btn btn-num" data-val="9">9</button>
+        <button class="btn btn-op" data-val="*">×</button>
+
+        <!-- Row 3 -->
+        <button class="btn btn-num" data-val="4">4</button>
+        <button class="btn btn-num" data-val="5">5</button>
+        <button class="btn btn-num" data-val="6">6</button>
+        <button class="btn btn-op" data-val="-">−</button>
+
+        <!-- Row 4 -->
+        <button class="btn btn-num" data-val="1">1</button>
+        <button class="btn btn-num" data-val="2">2</button>
+        <button class="btn btn-num" data-val="3">3</button>
+        <button class="btn btn-op" data-val="+">+</button>
+
+        <!-- Row 5 -->
+        <button class="btn btn-fn" data-val="+/-">±</button>
+        <button class="btn btn-num" data-val="0">0</button>
+        <button class="btn btn-num" data-val=".">.</button>
+        <button class="btn btn-eq" data-val="=">=</button>
+
+      </div>
+
+      <!-- Bottom badge -->
+      <div class="calc-badge">★ K7 EDITION ★</div>
+
+    </div>
+
+    <!-- Result reaction -->
+    <div class="reaction-banner" id="reactionBanner"></div>
+
+  </main>
+
+  <!-- Confetti canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Audio -->
+  <audio id="sndEqual" src="assets/sounds/mixkit-cartoon-dazzle-hit-and-birds-746.wav" preload="auto"></audio>
+  <audio id="sndNum"   src="assets/sounds/mixkit-long-pop-2358.wav" preload="auto"></audio>
+  <audio id="sndBg"    src="assets/sounds/mixkit-funny-cartoon-melody-2881.wav" preload="auto" loop></audio>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
